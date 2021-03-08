@@ -1,13 +1,9 @@
 name: Build
 
 on:
-  push:
-    branches: [ master ]
-    paths:
-      - 'MultiplayerExtensions/**'
-      - 'MultiplayerExtensionsTests/**'
-      - '.github/workflows/Build.yml'
-      - 'Refs/**'
+  release:
+    types:
+     - created
 
 jobs:
   Build:
